@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import logo from './logo.svg';
 import ReactDOM from 'react-dom';
 import './App.css';
+import { GlobalStateComponent } from './HookState/GlobalState';
+import { LocalStateComponent } from './HookState/LocalStateComponent/';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -10,27 +11,9 @@ function App() {
 
     return (
         <div className='App'>
-            <header className='App-header'>
-                <img src={logo} className='App-logo' alt='logo' />
-                <p>Hello Vite + React!</p>
-                <p>
-                    <button type='button' onClick={() => setCount((count) => count + 1)}>
-                        count is: {count}
-                    </button>
-                </p>
-                <p>
-                    Edit <code>App.jsx</code> and save to test HMR updates.
-                </p>
-                <p>
-                    <a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-                        Learn React
-                    </a>
-                    {' | '}
-                    <a className='App-link' href='https://vitejs.dev/guide/features.html' target='_blank' rel='noopener noreferrer'>
-                        Vite Docs
-                    </a>
-                </p>
-            </header>
+            <GlobalStateComponent />
+            <br />
+            <LocalStateComponent />
         </div>
     );
 }
@@ -41,4 +24,4 @@ document.getElementById('root').innerHTML; //?
 
 // At this point, either break the code to display live feedback next to the variables
 // Keep the code sound to get the feedback off the output below
-x; // <== comment/uncomment to see the difference
+// x; // <== comment/uncomment to see the difference
