@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 
 export const LocalStateComponent = () => {
     const state = useState(0);
+    state; //?
     return (
         <>
             <b>Counter value: {state.get()} </b>
@@ -13,3 +14,5 @@ export const LocalStateComponent = () => {
 };
 
 ReactDOM.render(<LocalStateComponent />, document.getElementById('root'));
+
+// x;

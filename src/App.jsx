@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './App.css';
 import { GlobalStateComponent } from './HookState/GlobalState';
 import { LocalStateComponent } from './HookState/LocalStateComponent/';
+import { NestedStateComponent } from './HookState/NestedStateComponent';
+import { ScopedStateComponent } from './HookState/ScopedStateComponent';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -14,6 +16,10 @@ function App() {
             <GlobalStateComponent />
             <br />
             <LocalStateComponent />
+            <br />
+            <NestedStateComponent />
+            <br />
+            <ScopedStateComponent />
         </div>
     );
 }
