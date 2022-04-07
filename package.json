@@ -1,0 +1,22 @@
+{
+  "name": "vite-quokka",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "node-fetch": "2.6.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.17.7",
+    "@vitejs/plugin-react": "^1.0.7",
+    "babel-preset-react-app": "^10.0.1",
+    "jsdom-quokka-plugin": "^1.0.16",
+    "vite": "^2.9.0"
+  }
+}
