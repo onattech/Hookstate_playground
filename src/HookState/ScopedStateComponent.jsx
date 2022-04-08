@@ -1,6 +1,7 @@
 import React from 'react';
-import { useState, none } from '@hookstate/core';
+import { useState, none, createState, Downgraded } from '@hookstate/core';
 import ReactDOM from 'react-dom';
+import { MyStateWatchPlugin, SalaryPlugin } from './Plugins';
 
 export const ScopedStateComponent = () => {
     const state = useState([{ name: 'First Task' }]);
@@ -18,6 +19,7 @@ export const ScopedStateComponent = () => {
 
 function TaskEditor(props) {
     const taskState = useState(props.taskState);
+    taskState.attach(MyStateWatchPlugin);
     return (
         <p>
             <input value={taskState.name.get()} onChange={(e) => taskState.name.set(e.target.value)} />
