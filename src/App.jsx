@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
+import { AsynchronousStateComponent } from './HookState/AsynchronousState';
 import { GlobalStateComponent } from './HookState/GlobalState';
 import { LocalStateComponent } from './HookState/LocalStateComponent/';
 import { NestedStateComponent } from './HookState/NestedStateComponent';
@@ -20,6 +21,8 @@ function App() {
             <NestedStateComponent />
             <br />
             <ScopedStateComponent />
+            <br />
+            <AsynchronousStateComponent />
         </div>
     );
 }
